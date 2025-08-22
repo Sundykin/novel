@@ -11,9 +11,12 @@ func holder(routers ...*gin.RouterGroup) {
 	_ = router.RouterGroupApp
 }
 
-func initBizRouter(routers ...*gin.RouterGroup) {
-	privateGroup := routers[0]
-	publicGroup := routers[1]
-
-	holder(publicGroup, privateGroup)
+func initBizRouter(Router *gin.RouterGroup, PublicRouter *gin.RouterGroup) {
+	novelRouter := router.RouterGroupApp.Novel
+	{
+		// 代码生成器历史 开始
+		novelRouter.NovelRouter.InitNovelRouter(Router, PublicRouter)
+		novelRouter.AIRouter.InitAIRouter(Router, PublicRouter)
+		// 代码生成器历史 结束
+	}
 }

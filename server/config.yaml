@@ -141,7 +141,7 @@ mysql:
     db-name: gin_vue_admin
     username: root
     password: "123456"
-    path: 127.0.0.1
+    path: 101.200.197.111  # 修改为您的数据库地址
     engine: ""
     log-mode: error
     max-idle-conns: 10
@@ -186,7 +186,7 @@ qiniu:
     use-cdn-domains: false
 redis:
     name: ""
-    addr: 127.0.0.1:6379
+    addr: 101.200.197.111:6379  # 修改为您的Redis地址
     password: ""
     db: 0
     useCluster: false
@@ -196,7 +196,7 @@ redis:
         - 172.21.0.2:7002
 redis-list:
     - name: cache
-      addr: 127.0.0.1:6379
+      addr: 101.200.197.111:6379
       password: ""
       db: 0
       useCluster: false
@@ -222,7 +222,7 @@ system:
     db-type: mysql
     oss-type: local
     router-prefix: ""
-    addr: 8888
+    addr: 8889
     iplimit-count: 15000
     iplimit-time: 3600
     use-multipoint: false
